@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aspro/basic</title>
+    <link rel="stylesheet" href="./css/basic.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="wrapper-header">
+            <div class="header-logo">
+                <h1>ASPRO</h1>
+            </div>
+            <div class="header-buttons">
+                <a href="#">Модули</a>
+                <a href="#">Возможности</a>
+                <a href="#">Решения</a>
+                <a href="#">Ресурсы</a>
+                <a href="#">Услуги</a>
+                <a href="#">Цены</a>
+            </div>
+            <div class="header-login">
+                <div class="header-burger hide">
+                    <a href=""><img src="./image/header/Burger2.png" alt="#"></a>
+                </div>
+                <div class="popup-menu hide">
+                    <ul>
+                        <li><img src="./image/header/free-icon-magnifier-2311526.png" alt="#"><a href="#">Поиск</a></li>
+                        <li><img src="./image/header/free-icon-profile-user-64572.png" alt="#"><a href="#">Профиль</a></li>
+                        <li><img src="./image/header/free-icon-settings-503849.png" alt="#"><a href="./remont.html">Настройки</a></li>
+                        <li><img src="./image/base.sidebar/Создать новую запись.png" alt="#"><a href="./base.html">Создать</a></li>
+                    </ul>
+                </div>
+                <button id="header-login-button">Войти</button>
+                <button id="header-register-button"  onclick="window.location.href = 'basic.html'">Начать бесплатно</button>
+            </div>
+        </div>
+        <div class="wrapper-save">
+            <h1>Выберите сохранение для начала работы:</h1>
+        <div class="save">
+            <!--<button id="example-save-button" onclick="openSaveDialog()">
+                <div class="save-button-left">
+                    <h2>Пример сохранения №0</h2>
+                    <b>Описание:</b>
+                    <p>Данная заметка - пример, чтобы вы понимали, как будут сохраняться ваши заметки</p>
+                </div>
+                <a href="base.html" class="save-link"></a>
+            </button>-->
+        </div>
+        <div class="save-button-end">
+            <button id="save-button-new" onclick="addSaveCard()">Создать</button>
+            <button id="save-button-project" onclick="window.location.href = 'base.html'">Выбрать шаблон</button>
+        </div>
+        </div>
+        <div class="wrapper-end">
+            <div class="end-start">
+                <div class="start">
+                    <h1>Продукты</h1>
+                    <a href="#">CRM</a>
+                    <a href="#">Проекты</a>
+                    <a href="#">Финансы</a>
+                    <a href="#">Счета и акты</a>
+                    <a href="#">Базы знаний</a>
+                </div>
+                <div class="start">
+                    <h1>Решения</h1>
+                    <a href="#">IT-Компании</a>
+                    <a href="#">Строительные компании</a>
+                    <a href="#">Веб-студии</a>
+                    <a href="#">B2B-продажи</a>
+                    <a href="#">Образование</a>
+                </div>
+                <div class="start">
+                    <h1>Услуги</h1>
+                    <a href="#">Внедрение CRM</a>
+                    <a href="#">Внедрение финансового учета</a>
+                    <a href="#">Консультации</a>
+                    <a href="#">Обучение</a>
+                    <a href="#">Демонстрация</a>
+                </div>
+                <div class="start">
+                    <h1>Партнерам</h1>
+                    <a href="#">Партнерская программа</a>
+                    <a href="#">Реферальная программа</a>
+                    <a href="#">Медиакит</a>
+                </div>
+                <div class="start">
+                    <h1>Ресурсы</h1>
+                    <a href="#">Кейсы</a>
+                    <a href="#">Блок</a>
+                    <a href="#">Руководства</a>
+                    <a href="#">Интеграции</a>
+                    <a href="#">Что нового ?</a>
+                </div>
+                <div class="start">
+                    <h1>Полезное</h1>
+                    <a href="#">Мобильное приложение</a>
+                    <a href="#">Документация API</a>
+                </div>
+                <div class="start">
+                    <h1>Компания</h1>
+                    <a href="#">О Компании</a>
+                    <a href="#">Варианты оплаты</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Реквизиты</a>
+                    <a href="#">Партнеры</a>
+                </div>
+                <div class="start">
+                    <h1>Документы</h1>
+                    <a href="#">Конфиденциальность</a>
+                    <a href="#">Лицензионный договор</a>
+                    <a href="#">Лицензионное соглашение</a>
+                </div>
+                <div class="start">
+                    <h1>Отдел внедрения</h1>
+                    <a href="#">c@aspro.cloud</a>
+                    <a href="#">+7 700 101-08-31</a>
+                </div>
+                <div class="start">
+                    <h1>Поддержка</h1>
+                    <a href="#">support@aspro.cloud</a>
+                    <a href="#">Регламент работы поддержки</a>
+                </div>
+            </div>
+            <p>© 2024 Все права защищены</p>
+        </div>
+    </div>
+    <script src="./js/basic.js"></script>
+</body>
+</html>

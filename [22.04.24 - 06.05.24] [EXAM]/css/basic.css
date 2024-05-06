@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    
+}
+
+body {
+    background-color: #dce3ec;
+    color: #1C1E21;
+}
+
+/*ОЧЕНЬ ВАЖНО. НЕ ТРОГАТЬ !!!*/
+.hide {
+    display: none;
+}
+.active {
+    display: flex;
+}
+
+/*ИСПРАВЕН !!!*/
+.container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 50px;
+}
+
+
+/*________________________________________________________*/
+
+/*WRAPPER-HEADER*/ /*HEADER - ЗДЕСЬ НЕ НУЖНО ОБЬЯСНЯТЬ !!!*/
+
+/*________________________________________________________*/
+
+
+
+/* НЕ ИСПРАВЕН !!!*/ /*НУЖНО ПОСМОТРЕТЬ !!!*/
+.wrapper-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #dce3ec; 
+    transition: background-color 0.3s, width 0.3s;
+    z-index: 100;
+    transition: height 1.0s ease, background-color 1.0s ease, box-shadow 1.0s ease;
+    
+}
+
+/* НЕ ИСПРАВЕН !!!*/
+.wrapper-header.white {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-header {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/*ИСПРАВЕН !!!*/
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    
+}
+
+/*ИСПРАВЕН !!!*/
+.header-login {
+    display: flex;
+    gap: 20px;
+
+}
+
+/*ИСПРАВЕН !!!*/
+.header-buttons {
+    display: flex;
+    gap: 50px;
+}
+
+/*ИСПРАВЕН !!!*/ /*НУЖНО ПОСМОТРЕТЬ !!!*/
+.header-buttons a {
+    text-decoration: none;
+
+    color: #1C1E21;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/*ИСПРАВЕН !!!*/
+a:hover {
+    color: #0056b3; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/*ИСПРАВЕН !!!*/
+a:active {
+    color: #182b69;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/*ИСПРАВЕН !!!*/ /*НУЖНО ПОСМОТРЕТЬ !!!*/
+#header-login-button {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #D2DAF6; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #header-login-button:hover {
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/ /*НУЖНО ПОСМОТРЕТЬ !!!*/
+#header-register-button {
+    width: 160px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #header-register-button:hover {
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+.header-burger {
+    position: relative;
+}
+
+/*ИСПРАВЕН !!!*/
+.popup-menu {
+    width: 40%;
+    display: none;
+    position: absolute;
+    bottom: -120px;
+    right: -15%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease;
+
+    border-radius: 20px;
+    padding-bottom: 20px;
+
+}
+
+/*ИСПРАВЕН !!!*/
+.popup-menu.active {
+    display: block;
+}
+
+/*ИСПРАВЕН !!!*/
+.popup-menu ul {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+}
+
+/*ИСПРАВЕН !!!*/
+.popup-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*ИСПРАВЕН !!!*/
+.popup-menu img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+/*ИСПРАВЕН !!!*/
+.popup-menu a:hover {
+    color: #5a5a5a; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/*ИСПРАВЕН !!!*/
+.popup-menu a:active {
+    color: #000;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+
+/*________________________________________________________*/
+
+/*WRAPPER-SAVE*/ /*SAVE - ЗДЕСЬ БУДУТ ХРАНИТЬСЯ ВАШИ СОХРАНЕНИЯ !!!*/
+
+/*________________________________________________________*/
+
+
+
+
+/*ИСПРАВЕН !!!*/
+.wrapper-save {
+    margin-top: 200px;
+    font-size: 20px;
+
+    width: 100%;
+    height: 60%;
+    background-color: white;
+    box-shadow: 0px -6px 16px 2px rgba(85, 85, 85, 0.17);
+
+    border-radius: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-save:hover {
+    box-shadow: 0px -6px 16px 2px #0000002d;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-save h1 {
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+
+/*ИСПРАВЕН !!!*/
+.save {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 60px;
+    
+}
+
+/*ИСПРАВЕН !!!*/
+.save-button {
+    border: 0;
+}
+
+/*ИСПРАВЕН !!!*/
+.save-button-left {
+    width: 400px;
+    height: 250px;
+    background-color: #dce3ec;
+    border: 0;
+    border-radius: 20px;
+
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    
+    padding-left: 30px;
+
+}
+
+/*ИСПРАВЕН !!!*/
+.save-button-left h2 {
+    width: 200px;
+    font-size: 30px;
+    text-align: left;
+}
+
+/*ИСПРАВЕН !!!*/
+.save-button-left b {
+    font-size: 15px;
+}
+
+/*ИСПРАВЕН !!!*/
+.save-button-left p {
+    font-size: 15px;
+}
+
+/*ИСПРАВЕН !!!*/
+.save-button-end {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+/*ИСПРАВЕН !!!*/
+#save-button-new {
+    width: 200px;
+    height: 65px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #save-button-new:hover {
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+#save-button-project{
+    width: 200px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid #3761E9;
+    background-color: transparent; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #save-button-project:hover {
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+button[id^="custom-save-button-"] {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/*ИСПРАВЕН !!!*/
+button[id^="custom-save-button-"]:hover {
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*___________________________________________________________________________*/
+
+/*WRAPPER-END*/ /*END - КОНЦОВКА МОЕГО САЙТА !!!*/
+
+/*___________________________________________________________________________*/
+
+
+
+/*ИСПРАВЕН !!!*/
+.wrapper-end {
+    width: 100%;
+    height: 800px;
+    background-color: #dce3ec;
+    border-radius: 50px;
+    box-shadow: 0px -6px 16px 2px rgba(0, 0, 0, 0.17);
+
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 35px;
+    padding-bottom: 50px;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-end p {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+/*ИСПРАВЕН !!!*/
+.end-start {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*ИСПРАВЕН !!!*/
+.start {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding-top: 100px;
+}
+
+/*ИСПРАВЕН !!!*/
+.start h1 {
+    font-size: 20px;
+    font-weight: 450;
+    font-weight: bold;
+}
+
+/*ИСПРАВЕН !!!*/
+.start a {
+    text-decoration: none;
+    color: #5a5a5a;
+
+}
+
+/*ИСПРАВЕН !!!*/
+.start a:hover {
+    color: #0056b3; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+
+/*___________________________________________________________________________*/
+
+/*MEDIA*/ /*ДЛЯ ПЛАНШЕТА*/
+
+/*___________________________________________________________________________*/
+
+
+
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+
+    .header-logo {
+        font-size: 15px;
+        margin-left: -200px;
+    }
+    .header-buttons {    
+        display: none;
+    }
+    .header-burger {
+        display: flex;
+        align-items: center;
+    }
+    .header-burger img{
+        width: 30px;
+        height: 30px;
+    }
+    .header-login {
+        margin-right: -200px;
+    }
+    #header-login-button {
+        width: 80px;
+        height: 40px;
+        font-size: 12px;
+    }
+    #header-register-button {
+        width: 140px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .popup-menu {
+        width: 40%;
+        display: none;
+        position: absolute;
+        bottom: -120px;
+        right: -15%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        transition: bottom 0.3s ease;
+    
+        border-radius: 20px;
+        padding-bottom: 20px;
+    
+    }
+    
+    .popup-menu.active {
+        display: block;
+    }
+    
+    .popup-menu ul {
+        list-style-type: none;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 10px;
+    }
+    
+    .popup-menu a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    
+    .popup-menu img {
+        display: none;
+    }
+    
+    
+    .popup-menu a:hover {
+        color: #5a5a5a; 
+        transition: background-color 0.3s, color 0.3s; 
+    }
+    
+    
+    .popup-menu a:active {
+        color: #000;
+        transition: background-color 0.3s, color 0.3s; 
+    }
+
+    /*____________________________*/
+
+
+    .wrapper-save h1 {
+        font-size: 30px;
+    }
+
+    .save {
+        display: flex;
+        gap: 25px;
+    }
+
+    #example-save-button {
+        width: 300px;
+        height: 200px;
+        box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.27);
+
+    }
+
+    .save-button-left {
+        width: 250px;
+    }
+    .save-button-left h2 {
+        font-size: 20px;
+    }
+    .save-button-left b {
+        font-size: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .save-button-left p {
+        font-size: 15px;
+    }
+
+    #example-save-button img {
+        display: none;
+    }
+
+    /*____________________________*/
+
+    .wrapper-end {
+        width: 100%;
+        height: 600px;
+        display: flex;
+    }
+
+    .end-start {
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .start {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        padding-top: 50px;
+    }
+
+    .start h1 {
+        font-size: 15px;
+    }
+
+    .start a {
+        text-decoration: none;
+        color: #5a5a5a;
+        font-size: 12px;
+    }
+
+
+}
+
+
+
+
+
+/*___________________________________________________________________________*/
+
+/*MEDIA*/ /*ДЛЯ ТЕЛЕФОНА*/
+
+/*___________________________________________________________________________*/
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .wrapper-header {
+        width: 425px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        font-size: 15px;
+        margin-left: 25px;
+    }
+    .header-buttons {    
+        display: none;
+    }
+    .header-burger {
+        display: flex;
+        align-items: center;
+    }
+    .header-burger img{
+        width: 30px;
+        height: 30px;
+
+        margin-right: 25px;
+    }
+    #header-login-button {
+        display: none;
+    }
+    #header-register-button {
+        display: none;
+    }
+
+    .popup-menu {
+        width: 40%;
+        display: none;
+        position: absolute;
+        bottom: -120px;
+        right: -15%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        transition: bottom 0.3s ease;
+    
+        border-radius: 20px;
+        padding-bottom: 20px;
+    
+    }
+    
+    .popup-menu.active {
+        display: block;
+    }
+    
+    .popup-menu ul {
+        list-style-type: none;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 10px;
+    }
+    
+    .popup-menu a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    
+    .popup-menu img {
+        display: none;
+    }
+    
+    
+    .popup-menu a:hover {
+        color: #5a5a5a; 
+        transition: background-color 0.3s, color 0.3s; 
+    }
+    
+    
+    .popup-menu a:active {
+        color: #000;
+        transition: background-color 0.3s, color 0.3s; 
+    }
+
+    /*____________________________*/
+
+
+    .wrapper-save h1 {
+        font-size: 25px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .save {
+        display: flex;
+        gap: 50px;
+    }
+
+    #example-save-button {
+        width: 300px;
+        height: 200px;
+        box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.27);
+
+    }
+
+    .save-button-left {
+        width: 250px;
+    }
+    .save-button-left h2 {
+        font-size: 20px;
+    }
+    .save-button-left b {
+        font-size: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .save-button-left p {
+        font-size: 15px;
+    }
+
+    #example-save-button img {
+        display: none;
+    }
+
+    .save-button-end {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    /*____________________________*/
+
+    .wrapper-end {
+        width: 425px;
+        height: 2150px;
+        display: flex;
+    }
+
+    .end-start {
+        width: 425px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+}

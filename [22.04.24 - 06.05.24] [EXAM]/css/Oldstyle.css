@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/*::-webkit-scrollbar {
+    display: none; 
+}*/
+
+/*html, body {
+    overflow-x: hidden; /* Убираем ползунок прокрутки по горизонтали на всей странице 
+}*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: #dce3ec;
+    color: #1C1E21;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.container {
+    width: 100%;
+    height: 1000vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 50px;
+}
+
+.wrapper-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #dce3ec; /* Начальный цвет фона вашего заголовка */
+    transition: background-color 0.3s, width 0.3s; /* Добавляем плавную анимацию для изменения цвета и ширины */
+    z-index: 1000;
+}
+
+.wrapper-header.white {
+    background-color: white !important; /* Цвет фона заголовка при прокрутке */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Добавляем тень при прокрутке */
+}
+
+
+
+.wrapper-header {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.header-logo img {
+    width: 150px;
+
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.header-login {
+    display: flex;
+    gap: 20px;
+
+}
+
+#header-button {
+    /*НАСТРОЙКИ ДЛЯ КНОПОК В НАЧАЛЕ*/
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    border: none; 
+
+  }
+  
+  .text {
+    /*НАСТРОЙКИ ШРИФТА ДЛЯ КНОПОК В НАЧАЛЕ*/
+    color: #1C1E21;
+    transition: color 0.3s ease;
+    
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 15px;
+  }
+  
+  #header-button:hover .text {
+    color: #0056b3; ;
+  }
+  
+  #header-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3761E9;
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  #header-button:hover::after {
+    transform: scaleX(1);
+}
+
+#header-login-button {
+    /*БАЗОВЫЕ НАСТРОЙКИ КНОПКИ*/
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #D2DAF6; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    /*БАЗОВЫЕ НАСТРОЙКИ ШРИФТА ДЛЯ КНОПКИ*/
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #header-login-button:hover {
+        /*ОБЫЧНЫЕ НАСТРОЙКИ АНИМАЦИИ ДЛЯ КНОПКИ*/
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+#header-register-button {
+    /*БАЗОВЫЕ НАСТРОЙКИ КНОПКИ*/
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    /*БАЗОВЫЕ НАСТРОЙКИ ШРИФТА ДЛЯ КНОПКИ*/
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #header-register-button:hover {
+        /*ОБЫЧНЫЕ НАСТРОЙКИ АНИМАЦИИ ДЛЯ КНОПКИ*/
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 100px;
+
+    
+}
+.wrapper-demo h1 {
+    font-size: 50px;
+    width: 750px;
+    text-align: center;
+    font-weight: bolder;
+
+}
+.wrapper-demo p { 
+    color: #757575;
+    font-size: 15px;
+}
+.demo-text-dop {
+    background: linear-gradient(1deg, #4A86DD, #AF56B0, #CB2553);
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.demo-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 60px;
+}
+.demo-button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.demo-button-text img {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    background: transparent;
+}
+.demo-button-text p {
+    color: black;
+    font-weight: 600;
+}
+
+#demo-button {
+    /*ИДЕАЛЬНАЯ КНОПКА !!!*/
+    width: 150px;
+    height: 150px;
+    border: none;
+    outline: none;
+    color: #96ABF1;
+    background: #34383D;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    display: flex;
+    align-items: center;
+    }
+
+    #demo-button:before {
+        content: '';
+        background: linear-gradient(1deg, #4A86DD, #AF56B0, #CB2553);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 20px;
+
+
+    }
+    #demo-button:active {
+        color: #000;
+    }
+    
+    #demo-button:active:after {
+        background: white;
+        
+    }
+    
+    #demo-button:hover:before {
+        opacity: 1;
+
+    }
+    #demo-button:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        color: #96ABF1;
+        left: 0;
+        top: 0;
+        border-radius: 20px;
+    }
+    @keyframes button {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+}
+
+
+.demo-button-start-and-end {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#demo-button-start {
+    /*БАЗОВЫЕ НАСТРОЙКИ КНОПКИ*/
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    /*БАЗОВЫЕ НАСТРОЙКИ ШРИФТА ДЛЯ КНОПКИ*/
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #demo-button-start:hover {
+        /*ОБЫЧНЫЕ НАСТРОЙКИ АНИМАЦИИ ДЛЯ КНОПКИ*/
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+#demo-button-end{
+    /*БАЗОВЫЕ НАСТРОЙКИ КНОПКИ*/
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #D2DAF6; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    /*БАЗОВЫЕ НАСТРОЙКИ ШРИФТА ДЛЯ КНОПКИ*/
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #demo-button-end:hover {
+        /*ОБЫЧНЫЕ НАСТРОЙКИ АНИМАЦИИ ДЛЯ КНОПКИ*/
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+
+
+#demo-horizontal-scroll-container {
+    margin-top: 50px;
+
+    width: 100vw; 
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+#demo-horizontal-scroll-container img {
+    display: inline-block; 
+    max-height: 100%; 
+    max-width: none;
+    margin-right: 10px; /* Добавляем отступ между изображениями (необязательно) */
+    animation: horizontalScroll 10s linear infinite; 
+}
+
+@keyframes horizontalScroll {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.wrapper-demo h2 {
+    margin-top: 50px;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+}
+
+
+.demo-img {
+    margin-top: 30px;
+    margin-bottom: 150px;
+
+    width: 800px;
+    height: 100px;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+
+
+
+}
+
+
+.wrapper-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+}
+.about {
+    width: 1000px;
+    height: 1000px;
+    background-color: wheat;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*НА ВСЯКИЙ СЛУЧАЙ*/
+.hide {
+    display: none;
+}
+.active {
+    display: flex;
+}
+
+
+
+
+
+
+
+/*ТУТ НАЧИНАЕТСЯ ХАОС*/
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .wrapper-header {
+        margin-top: 20px;
+    }
+    .header-logo img {
+        width: 250px;
+        margin-left: -50px;
+    }
+    .header-buttons {    
+        display: none;
+    }
+    .header-burger {
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+    .header-burger img{
+        width: 50px;
+        height: 50px;
+        margin-left: 40px;
+    }
+    .header-login {
+        margin-right: 0px;
+    }
+    #header-login-button {
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
+    }
+    #header-register-button {
+        width: 170px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .wrapper-header {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-logo img {
+        width: 250px;
+    }
+    .header-buttons {    
+        display: none;
+    }
+    .header-burger {
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+    .header-burger img{
+        width: 50px;
+        height: 50px;
+    }
+    .header-login {
+        display: flex;
+        align-items: center;
+    }
+    #header-login-button {
+        display: none;
+    }
+    #header-register-button {
+        display: none;
+    }
+
+}
+
+

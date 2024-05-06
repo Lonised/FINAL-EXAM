@@ -1,0 +1,1880 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    
+}
+
+body {
+    background-color: #dce3ec;
+    color: #1C1E21;
+
+    overflow-x: hidden;
+}
+
+/*ОЧЕНЬ ВАЖНО. НЕ ТРОГАТЬ !!!*/
+.hide {
+    display: none;
+}
+.active {
+    display: flex;
+}
+
+/*ИСПРАВЕН !!!*/
+.container {
+    width: 100%;
+    height: 450vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 50px;
+
+}
+
+
+
+
+/*________________________________________________________*/
+
+/*WRAPPER-HEADER*/ /*HEADER - ЗДЕСЬ НЕ НУЖНО ОБЬЯСНЯТЬ !!!*/
+
+/*________________________________________________________*/
+
+
+
+/* НЕ ИСПРАВЕН !!!*/ /*НУЖНО ПОСМОТРЕТЬ !!!*/
+.wrapper-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #dce3ec; 
+    transition: background-color 1s, width 1s, height 1s ease, box-shadow 1s ease;
+    z-index: 100;
+}
+
+.wrapper-header.white {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-header {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.header-logo a {
+    font-size: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.header-logo a:hover {
+    font-weight: bolder;
+}
+
+/*ИСПРАВЕН !!!*/
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    
+}
+
+/*ИСПРАВЕН !!!*/
+.header-login {
+    display: flex;
+    gap: 20px;
+
+}
+
+/*ИСПРАВЕН !!!*/
+.header-buttons {
+    display: flex;
+    gap: 50px;
+}
+
+/*ИСПРАВЕН !!!*/ /*НУЖНО ПОСМОТРЕТЬ !!!*/
+.header-buttons a {
+    text-decoration: none;
+
+    color: #1C1E21;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/*ИСПРАВЕН !!!*/
+a:hover {
+    color: #0056b3; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/*ИСПРАВЕН !!!*/
+a:active {
+    color: #182b69;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/*ИСПРАВЕН !!!*/ /*НУЖНО ПОСМОТРЕТЬ !!!*/
+#header-login-button {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #D2DAF6; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #header-login-button:hover {
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/ /*НУЖНО ПОСМОТРЕТЬ !!!*/
+#header-register-button {
+    width: 160px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #header-register-button:hover {
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+.header-burger {
+    position: relative;
+}
+
+.popup-menu {
+    width: 40%;
+    display: none;
+    position: absolute;
+    bottom: -120px;
+    right: -15%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease;
+
+    border-radius: 20px;
+    padding-bottom: 20px;
+
+}
+
+.popup-menu.active {
+    display: block;
+}
+
+.popup-menu ul {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+}
+
+.popup-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.popup-menu img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+
+.popup-menu a:hover {
+    color: #5a5a5a; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+.popup-menu a:active {
+    color: #000;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+
+
+/*___________________________________________________________________________*/
+
+/*WRAPPER-DEMO*/ /*DEMO - ПОТОМУ ЧТО "ИСПОЛЬЗОВАТЬ БЕСПЛАТНО ДЕМО-ВЕРСИЮ" !!!*/
+
+/*___________________________________________________________________________*/
+
+/*ИСПРАВЕН !!!*/ /*НУЖНО СЛЕДИТЬ ЗА MARGIN-TOP !!!*/
+.wrapper-demo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 150px;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-demo h1 {
+    font-size: 50px;
+    width: 750px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-demo p { 
+    color: #686868;
+    font-size: 15px;
+}
+
+/*ИСПРАВЕН !!!*/
+.demo-text-dop {
+    background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	transform: translate3d(0, 0, 0);
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*ИСПРАВЕН !!!*/
+.demo-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 60px;
+}
+
+/*ИСПРАВЕН !!!*/
+.demo-button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/*ИСПРАВЕН !!!*/
+.demo-button-text img {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    background: transparent;
+}
+
+/*ИСПРАВЕН !!!*/
+.demo-button-text p {
+    color: black;
+    font-weight: 600;
+}
+
+/*ИСПРАВЕН !!!*/ /*БЫТЬ ОСТОРОЖНЫМ !!!*/
+#demo-button {
+    width: 150px;
+    height: 150px;
+    border: none;
+    outline: none;
+    color: #96ABF1;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    display: flex;
+    align-items: center;
+    }
+    /*ИСПРАВЕН !!!*/
+    #demo-button:before {
+        content: '';
+        background: linear-gradient(1deg, #4A86DD, #AF56B0, #CB2553);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 20px;
+
+
+    }
+    /*ИСПРАВЕН !!!*/
+    #demo-button:active {
+        color: #000;
+    }
+    /*ИСПРАВЕН !!!*/
+    #demo-button:active:after {
+        background: white;
+        
+    }
+    /*ИСПРАВЕН !!!*/
+    #demo-button:hover:before {
+        opacity: 1;
+
+    }
+    /*ИСПРАВЕН !!!*/
+    #demo-button:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        color: #96ABF1;
+        left: 0;
+        top: 0;
+        border-radius: 20px;
+    }
+    /*ИСПРАВЕН !!!*/
+    @keyframes button {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+}
+
+/*ИСПРАВЕН !!!*/
+.demo-button-start-and-end {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/*ИСПРАВЕН !!!*/
+#demo-button-start {
+    width: 200px;
+    height: 65px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #demo-button-start:hover {
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+#demo-button-end{
+    width: 200px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid #3761E9;
+    background-color: transparent; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #demo-button-end:hover {
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-demo h2 {
+    margin-top: 70px;
+
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/*ИСПРАВЕН !!!*/
+.demo-img {
+    margin-top: 40px;
+    margin-bottom: 150px;
+
+    width: 800px;
+    height: 100px;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+
+#demo-horizontal-scroll-container {
+    margin-top: 50px;
+    width: 100vw; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    transition: transform 1.5s ease; 
+    display: flex;
+    gap: 50px;
+}
+
+#demo-horizontal-scroll-container.scroll-down-animation img {
+    animation: horizontalScrollRight 10s linear infinite; 
+}
+
+#demo-horizontal-scroll-container.scroll-up-animation img {
+    animation: horizontalScrollLeft 10s linear infinite; 
+}
+
+@keyframes horizontalScrollRight {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes horizontalScrollLeft {
+    0% {
+        transform: translateX(-100%); 
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/*___________________________________________________________________________*/
+
+/*WRAPPER-ABOUT*/ /*ABOUT - НЕБОЛЬШОЕ ОПИСАНИЕ ДАННОГО САЙТА" !!!*/
+/*САМЫЙ ЗАПУТАННАЯ ЧАСТЬ В КОДЕ... 200 МАТЕРНЫХ СЛОВ В СЕКУНДУ*/
+
+/*___________________________________________________________________________*/
+
+
+
+
+/*ИСПРАВЕН !!!*/ /*БЫТЬ ОСТОРОЖНЫМ !!!*/
+.wrapper-about {
+    width: 100%;
+    height: 1800px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px -6px 16px 2px rgba(0, 0, 0, 0.17);
+
+    /*border-end-start-radius: 0;*/
+    /*border-end-end-radius: 0;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 200px;
+
+}
+
+    .wrapper-about:hover {
+        box-shadow: 0px -6px 16px 2px #0000003f;
+        transition: box-shadow 0.3s ease;
+}
+
+
+/*ИСПРАВЕН !!!*/ 
+.wrapper-about h1 {
+    width: 800px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+/*ИСПРАВЕН !!!*/ /*БЫТЬ ОСТОРОЖНЫМ !!!*/
+.about-part {
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+/*ИСПРАВЕН !!!*/
+.part-left {
+    width: 600px;
+}
+
+/*ИСПРАВЕН !!!*/
+.part-left h2 {
+    font-size: 40px;
+    font-weight: bold;
+    
+    margin-bottom: 30px;
+}
+
+/*ИСПРАВЕН !!!*/
+.part-left p {
+    font-size: 25px;
+    font-weight: 350;
+}
+
+/*ИСПРАВЕН !!!*/
+.part-left-but {
+    margin-top: 50px;
+
+    display: flex;
+    gap: 30px;
+}
+
+/*ИСПРАВЕН !!!*/
+#about-register-button {
+    width: 250px;
+    height: 65px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #about-register-button:hover {
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+#about-more-button{
+    width: 170px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid #3761E9;
+    background-color: transparent; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #about-more-button:hover {
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/ /*БЫТЬ ОСТОРОЖНЫМ !!!*/
+.about-project {
+    margin-top: 150px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+/*ИСПРАВЕН !!!*/ 
+.project-left {
+    width: 597px;
+}
+
+/*ИСПРАВЕН !!!*/ 
+.project-left h2 {
+    font-size: 40px;
+    font-weight: bold;
+    
+    margin-bottom: 30px;
+}
+
+/*ИСПРАВЕН !!!*/ 
+.project-left p {
+    font-size: 25px;
+    font-weight: 350;
+}
+
+/*ИСПРАВЕН !!!*/ 
+.project-left-but {
+    margin-top: 50px;
+
+    display: flex;
+    gap: 30px;
+}
+
+
+
+
+/*___________________________________________________________________________*/
+
+/*WRAPPER-CHECK*/ /*CHECK - ДОПОЛНИТЕЛЬНАЯ ИНФА ОБ ЭТОМ САЙТЕ!!!*/
+
+/*___________________________________________________________________________*/
+
+
+
+/*ИСПРАВЕН !!!*/
+.wrapper-check {
+    width: 100%;
+    height: 1700px;
+    background-color: #26263E;
+    border-radius: 50px;
+    box-shadow: 0px -6px 16px 2px rgba(0, 0, 0, 0.17);
+
+    /*border-end-start-radius: 0;*/
+    /*border-end-end-radius: 0;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 35px;
+    padding-bottom: 200px;
+}
+
+.wrapper-check:hover {
+    box-shadow: 0px -6px 16px 2px #0000003f;
+    transition: box-shadow 0.3s ease;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-check h1 {
+    width: 1000px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    
+    color: white;
+
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+/*ИСПРАВЕН !!!*/
+.check-part {
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+/*ИСПРАВЕН !!!*/
+.check-right {
+    width: 600px;
+}
+
+/*ИСПРАВЕН !!!*/
+.check-right h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+
+    margin-bottom: 30px;
+}
+
+/*ИСПРАВЕН !!!*/
+.check-right p {
+    color: white;
+    font-size: 25px;
+    font-weight: 350;
+}
+
+/*ИСПРАВЕН !!!*/
+.check-right-but {
+    margin-top: 50px;
+
+    display: flex;
+    gap: 30px;
+}
+
+/*ИСПРАВЕН !!!*/
+#check-register-button {
+    width: 250px;
+    height: 65px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #check-register-button:hover {
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+#check-more-button{
+    width: 170px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid #3761E9;
+    background-color: transparent; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #check-more-button:hover {
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+.check-cart {
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+/*ИСПРАВЕН !!!*/
+.cart-right {
+    width: 600px;
+}
+
+/*ИСПРАВЕН !!!*/
+.cart-right h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+
+    margin-bottom: 30px;
+}
+
+/*ИСПРАВЕН !!!*/
+.cart-right p {
+    color: white;
+    font-size: 25px;
+    font-weight: 350;
+}
+
+/*ИСПРАВЕН !!!*/
+.cart-right-but {
+    margin-top: 50px;
+
+    display: flex;
+    gap: 30px;
+}
+
+/*ИСПРАВЕН !!!*/
+#cart-register-button {
+    width: 250px;
+    height: 65px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #check-register-button:hover {
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+/*ИСПРАВЕН !!!*/
+#cart-more-button{
+    width: 170px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid #3761E9;
+    background-color: transparent; 
+    color: #3761E9;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    }
+    #check-more-button:hover {
+        background-color: #3761E9;
+        color: #ffffff;
+}
+
+
+/*___________________________________________________________________________*/
+
+/*WRAPPER-TOOLS*/ /*TOOLS - ЗАПИШИТЕСЬ НА ОНЛАЙН-ДЕМОНСТРАЦИЮ !!!*/
+
+/*___________________________________________________________________________*/
+
+
+
+/*ИСПРАВЕН !!!*/
+.wrapper-tools {
+    width: 100%;
+    height: 1700px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px -6px 16px 2px rgba(0, 0, 0, 0.17);
+
+    /*border-end-start-radius: 0;*/
+    /*border-end-end-radius: 0;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 35px;
+    padding-bottom: 150px;
+}
+
+.wrapper-tools:hover {
+    box-shadow: 0px -6px 16px 2px #0000003f;
+    transition: box-shadow 0.3s ease;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-tools h1 {
+    width: 800px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 650;
+    
+    color: black;
+
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+/*ИСПРАВЕН !!!*/
+.tools {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+/*ИСПРАВЕН !!!*/
+.tools-left {
+    width: 600px;
+    height: 650px;
+    background-color: #F5F7FC;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 20px;
+}
+
+/*ИСПРАВЕН !!!*/
+.tools-left h2 {
+    font-size: 30px;
+    font-weight: 680;
+}
+
+/*ИСПРАВЕН !!!*/
+.tools-left a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3761E9;
+
+    margin-bottom: 20px;
+}
+
+/*ИСПРАВЕН !!!*/
+.tools-left a:hover {
+    color: #444444;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/*ИСПРАВЕН !!!*/
+.tools-left a:active {
+    color: #0056b3; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/*ИСПРАВЕН !!!*/
+.tools-left p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+
+    padding: 20px 20px;
+    
+}
+
+/*ИСПРАВЕН !!!*/
+.tools-sign {
+    width: 1250px;
+    height: 400px;
+    background: -webkit-linear-gradient(50deg, #a1468b,#683290,#3c44ab);     
+    
+    margin-top: 100px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+
+}
+
+/*ИСПРАВЕН !!!*/
+.sign-left {
+    width: 500px;
+}
+
+/*ИСПРАВЕН !!!*/
+.sign-left h4 {
+    color: white;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+/*ИСПРАВЕН !!!*/
+.sign-left p {
+    color: white;
+    font-weight: 500;
+    padding-bottom: 30px;
+    padding-right: 20px;
+}
+
+/*ИСПРАВЕН !!!*/
+#tools-register-button {
+    width: 170px;
+    height: 65px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #3761E9; 
+    color: #D2DAF6;
+    text-align: center;
+    line-height: 40px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    }
+    #tools-register-button:hover {
+        background-color: #3053c7;
+        color: #ffffff;
+}
+
+
+
+/*___________________________________________________________________________*/
+
+/*WRAPPER-END*/ /*END - КОНЦОВКА МОЕГО САЙТА !!!*/
+
+/*___________________________________________________________________________*/
+
+
+
+/*ИСПРАВЕН !!!*/
+.wrapper-end {
+    width: 100%;
+    height: 800px;
+    background-color: #dce3ec;
+    border-radius: 50px;
+    box-shadow: 0px -6px 16px 2px rgba(0, 0, 0, 0.17);
+
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 35px;
+    padding-bottom: 50px;
+}
+
+.wrapper-end:hover {
+    box-shadow: 0px -6px 16px 2px #0000003f;
+    transition: box-shadow 0.3s ease;
+}
+
+/*ИСПРАВЕН !!!*/
+.wrapper-end p {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+/*ИСПРАВЕН !!!*/
+.end-start {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*ИСПРАВЕН !!!*/
+.start {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding-top: 100px;
+}
+
+/*ИСПРАВЕН !!!*/
+.start h1 {
+    font-size: 20px;
+    font-weight: 450;
+    font-weight: bold;
+}
+
+/*ИСПРАВЕН !!!*/
+.start a {
+    text-decoration: none;
+    color: #5a5a5a;
+
+}
+
+/*ИСПРАВЕН !!!*/
+.start a:hover {
+    color: #0056b3; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+
+
+/*___________________________________________________________________________*/
+
+/*MEDIA*/ /*ДЛЯ ПЛАНШЕТА*/
+
+/*___________________________________________________________________________*/
+
+
+
+
+
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+    .header-logo {
+        font-size: 15px;
+        margin-left: -200px;
+    }
+    .header-buttons {    
+        display: none;
+    }
+    .header-burger {
+        display: flex;
+        align-items: center;
+    }
+    .header-burger img{
+        width: 30px;
+        height: 30px;
+    }
+    .header-login {
+        margin-right: -200px;
+    }
+    #header-login-button {
+        width: 80px;
+        height: 40px;
+        font-size: 12px;
+    }
+    #header-register-button {
+        width: 140px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    /*____________________________*/
+
+    .wrapper-demo h1 {
+        font-size: 40px;
+        width: 600px;
+    }
+
+    .demo-button {
+        gap: 20px;
+    }
+
+    .demo-button-text img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #demo-button {
+        width: 125px;
+        height: 125px;
+    }
+
+    .demo-button-start-and-end {
+        margin-top: 50px;
+    
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+
+    .wrapper-demo h2 {
+        font-size: 20px;
+    }
+
+    /*____________________________*/
+
+    .wrapper-about {
+        width: 1000px;
+        display: flex;
+
+    }
+
+    .wrapper-about h1 {
+        width: 600px;
+        font-size: 40px;
+    }
+
+    .about-part {
+        margin-top: 100px;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        gap: 40px;
+
+    }
+
+    .part-left {
+        width: 375px;
+    }
+
+    .part-left h2 {
+        font-size: 30px;
+    }
+
+    .part-left p {
+        font-size: 20px;
+        font-weight: 350;
+    }
+
+    .part-left-but {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .part-right img {
+        width: 400px;
+    }
+
+    .about-project {
+        margin-top: 150px;
+    
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .project-left {
+        width: 375px;
+    }
+
+    .project-left h2 {
+        font-size: 30px;
+    }
+
+    .project-left p {
+        font-size: 20px;
+        font-weight: 350;
+    }
+
+    .project-left-but {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .part-right img {
+        width: 500px;
+    }
+
+    /*____________________________*/
+
+    .wrapper-check {
+        width: 1000px;
+        display: flex;
+    }
+    
+    .wrapper-check h1 {
+        width: 700px;
+        font-size: 40px;
+    }
+
+    .check-part {
+        margin-top: 100px;
+    
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .check-right {
+        width: 375px;
+    }
+
+    .check-right h2 {
+        font-size: 30px;
+    }
+
+    .check-right p {
+        font-size: 20px;
+        color: white;
+        font-weight: 350;
+    }
+
+    .check-right-but {
+        display: flex;
+
+    }
+
+    .check-left img {
+        width: 500px;
+    }
+
+    .check-cart {
+        margin-top: 100px;
+    
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .cart-right {
+        width: 375px;
+    }
+
+    .cart-right h2 {
+        font-size: 30px;
+    }
+
+    .cart-right p {
+        font-size: 20px;
+        color: white;
+        font-weight: 350;
+    }
+
+    .cart-right-but {
+        display: flex;
+
+    }
+
+    .cart-left img {
+        width: 500px;
+    }
+
+    /*____________________________*/
+
+    .wrapper-tools {
+        width: 1000px;
+        display: flex;
+    }
+    
+    .wrapper-tools h1 {
+        width: 700px;
+        font-size: 40px;
+    }
+
+    .tools-left {
+        width: 400px;
+        height: 500px;
+        background-color: #F5F7FC;
+    
+        border-radius: 15px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 20px;
+    }
+
+    .tools-left h2 {
+        font-size: 25px;
+        font-weight: 680;
+    }
+
+    .tools-left a {
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .tools-left p {
+        font-size: 15px;
+        text-align: center;
+        font-weight: 500;
+    
+        padding: 20px 20px;
+        
+    }
+
+    .tools-left img {
+        width: 400px;
+    }
+
+    .tools-sign {
+        width: 850px;
+        height: 400px;
+        gap: 50px;
+    
+    }
+
+    .sign-left {
+        width: 200px;
+    }
+
+    /*____________________________*/
+
+    .wrapper-end {
+        width: 1000px;
+        display: flex;
+    }
+    
+    .end-start {
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .start {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    
+        padding-top: 50px;
+    }
+
+    .start h1 {
+        font-size: 15px;
+    }
+
+    .start a {
+        text-decoration: none;
+        color: #5a5a5a;
+        font-size: 12px;
+    }
+
+    .wrapper-end p {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+
+/*___________________________________________________________________________*/
+
+/*MEDIA*/ /*ДЛЯ ТЕЛЕФОНА*/
+
+/*___________________________________________________________________________*/
+
+
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .wrapper-header {
+        width: 425px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        font-size: 15px;
+        margin-left: 25px;
+    }
+    .header-buttons {    
+        display: none;
+    }
+    .header-burger {
+        display: flex;
+        align-items: center;
+    }
+    .header-burger img{
+        width: 30px;
+        height: 30px;
+
+        margin-right: 25px;
+    }
+    #header-login-button {
+        display: none;
+    }
+    #header-register-button {
+        display: none;
+    }
+
+    .popup-menu {
+        width: 40%;
+        display: none;
+        position: absolute;
+        bottom: -120px;
+        right: -15%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        transition: bottom 0.3s ease;
+    
+        border-radius: 20px;
+        padding-bottom: 20px;
+    
+    }
+    
+    .popup-menu.active {
+        display: block;
+    }
+    
+    .popup-menu ul {
+        list-style-type: none;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 10px;
+    }
+    
+    .popup-menu a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    
+    .popup-menu img {
+        display: none;
+    }
+    
+    
+    .popup-menu a:hover {
+        color: #5a5a5a; 
+        transition: background-color 0.3s, color 0.3s; 
+    }
+    
+    
+    .popup-menu a:active {
+        color: #000;
+        transition: background-color 0.3s, color 0.3s; 
+    }
+
+    /*____________________________*/
+
+    .wrapper-demo h1 {
+        font-size: 30px;
+        width: 250px;
+        margin-top: 20px;
+    }
+
+    .demo-button {
+        width: 400px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .demo-button-text img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #demo-button {
+        width: 125px;
+        height: 125px;
+    }
+
+    .demo-button-start-and-end {
+    
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .wrapper-demo h2 {
+        font-size: 20px;
+    }
+
+    .demo-img {
+        width: 100px;
+        margin-left: -25px;
+        margin-bottom: 600px;
+    }
+
+    /*____________________________*/
+
+    .wrapper-about {
+        width: 425px;
+        display: flex;
+    }
+
+    .wrapper-about h1 {
+        width: 400px;
+        font-size: 30px;
+    }
+
+    .about-part {
+        margin-top: 10px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 40px;
+    }
+
+    .part-left {
+        width: 400px;
+    }
+
+    .part-left h2 {
+        font-size: 30px;
+    }
+
+    .part-left p {
+        font-size: 20px;
+        font-weight: 350;
+    }
+
+    .part-left-but {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .part-right img {
+        width: 400px;
+    }
+
+    .about-project {
+        margin-top: 50px;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .project-left {
+        width: 400px;
+    }
+
+    .project-left h2 {
+        font-size: 30px;
+    }
+
+    .project-left p {
+        font-size: 20px;
+        font-weight: 350;
+    }
+
+    .project-left-but {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    /*____________________________*/
+
+    .wrapper-check {
+        width: 425px;
+        display: flex;
+        height: 1900px;
+
+    }
+
+    .wrapper-check h1 {
+        width: 400px;
+        font-size: 30px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .check-part {
+        margin-top: 10px;
+    
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .check-right {
+        width: 400px;
+    }
+
+    .check-right h2 {
+        font-size: 25px;
+    }
+
+    .check-right p {
+        font-size: 20px;
+    }
+
+    .check-right-but {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .check-left img {
+        width: 400px;
+    }
+
+    .check-cart {
+        margin-top: 50px;
+    
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .cart-right {
+        width: 400px;
+    }
+
+    .cart-right h2 {
+        font-size: 25px;
+    }
+
+    .cart-right p {
+        font-size: 20px;
+    }
+
+    .cart-right-but {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+    }
+
+    .cart-left img {
+        width: 400px;
+    }
+
+    /*____________________________*/
+
+    .wrapper-tools {
+        width: 425px;
+        display: flex;
+    }
+
+    .wrapper-tools h1 {
+        width: 400px;
+        font-size: 30px;
+    }
+
+    .tools {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tools img {
+        display: none;
+    }
+
+    .tools-left {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .tools-left h2 {
+        font-size: 20px;
+        font-weight: 680;
+    }
+
+    .tools-left a {
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .tools-left p {
+        font-size: 15px;
+        text-align: center;
+        font-weight: 500;
+    
+        padding: 20px 20px;
+        
+    }
+
+    .tools-sign {
+        width: 400px;
+        height: 800px;
+        gap: 50px;
+    
+    }
+
+    .tools-sign img {
+        display: none;
+    }
+
+    .sign-left {
+        width: 300px;
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*____________________________*/
+
+    .wrapper-end {
+        width: 425px;
+        height: 2150px;
+        display: flex;
+    }
+
+    .end-start {
+        width: 425px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+
+
+}
